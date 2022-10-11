@@ -1,7 +1,7 @@
 points:
    key:
       padding: cy
-      tags: 
+      tags:
         1u: true
       footprints:
           choc_hotswap:
@@ -31,11 +31,11 @@ points:
       columns:
           pinkie:
             rotate: 40
-            row_overrides: 
+            row_overrides:
              home:
                bind: [0,5,2,5]
                column_net: P10
-               tags: 
+               tags:
                 15u: true
                 1u: false
                rotate: 90
@@ -43,33 +43,33 @@ points:
             spread: cx+0.5
             stagger: 12
             rotate: -5
-            rows: 
-              home: 
+            rows:
+              home:
                 bind: [0,0,3,1]
                 column_net: P9
-              top: 
+              top:
                 bind: [0,0,0,1]
                 column_net: P8
-          middle: 
+          middle:
             spread: cx+0.5
             stagger: -5
             rotate: -5
             rows:
-              home: 
+              home:
                 bind: [5,0,3,5]
                 column_net: P15
               top:
                 column_net: P14
                 bind: [0,1,0,5]
-          index: 
+          index:
             spread: cx
             stagger: -10
             rotate: -5
-            rows: 
-              home: 
+            rows:
+              home:
                 bind: [0,1,3,0]
                 column_net: P4
-              top: 
+              top:
                 bind: [0,1,3,3]
                 column_net: P5
     thumbfan:
@@ -84,7 +84,7 @@ points:
           rows:
             home:
               column_net: P0
-              tags: 
+              tags:
                 1u: false
                 15u: true
               rotate: 90
@@ -95,13 +95,13 @@ points:
           rows:
             home:
               column_net: P1
-              tags: 
+              tags:
                 1u: false
                 15u: true
               rotate: 90
 outlines:
   exports:
-    raw: 
+    raw:
       - type: keys
         side: left
         size: [1cx - 0.5 , 1cx -0.5]
@@ -119,14 +119,14 @@ outlines:
       - type: keys
         side: left
         size: [1cx - 0.5, 1cy - 0.5] # Choc keycaps are 17.5 x 16.5
-        bound: false    
-        tags: [1u]       
+        bound: false
+        tags: [1u]
     keycap_outlines15:
       - type: keys
         side: left
         size: [1.5cx - 0.5, 1cy - 0.5] # Choc keycaps are 17.5 x 16.5
-        bound: false    
-        tags: [15u]       
+        bound: false
+        tags: [15u]
     preview:
         [keycap_outlines,keycap_outlines15]
 pcbs:
@@ -151,52 +151,52 @@ pcbs:
           shift: [-28, -13.5]
           rotate: -110
         nets:
-          from: pos  
+          from: pos
           to: RAW
         params:
-          reverse: true 
+          reverse: true
       via3:
         type: via
-        anchor: 
+        anchor:
           ref: thumbfan_home_home
           shift: [3,10]
-        nets: 
-          net: RAW 
+        nets:
+          net: RAW
       via4:
         type: via
-        anchor: 
+        anchor:
           ref: thumbfan_home_home
           shift: [-3,10]
-        nets: 
-          net: pos 
+        nets:
+          net: pos
       via5:
         type: via
-        anchor: 
+        anchor:
           ref: thumbfan_home_home
           shift: [3,20]
-        nets: 
-          net: GND 
+        nets:
+          net: GND
       via6:
         type: via
-        anchor: 
+        anchor:
           ref: thumbfan_home_home
           shift: [-3,20]
-        nets: 
-          net: RST 
+        nets:
+          net: RST
       b3u1000p:
         type: b3u1000p
         nets:
-          r1: RST  
+          r1: RST
           r2: GND
         anchor:
           ref: thumbfan_home_home
           shift: [-14, 23]
           rotate: -110
         params:
-          reverse: true 
+          reverse: true
       bat:
         type: bat
-        nets: 
+        nets:
           neg: GND
         anchor:
           ref: thumbfan_home_home
