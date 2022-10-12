@@ -6,7 +6,7 @@ module.exports = {
     params: {
         class: 'S',
 		reverse: true
-    },
+	},
     body: p => {
 	    const standard = `
 	(module Button_Switch_SMD:SW_SPST_B3U-1000P (layer F.Cu) (tedit 5A02FC95)
@@ -31,15 +31,15 @@ module.exports = {
 	    function pins(def_neg, def_pos, def_side) {
 		  return `
 		    ${''/* pins */}
-	  (pad 1 smd rect (at ${def_neg}1.7 0) (size 0.9 1.7) (layers ${def_side}.Cu ${def_side}.Paste ${def_side}.Mask) ${p.net.r1.str})
-	  (pad 2 smd rect (at ${def_pos}1.7 0) (size 0.9 1.7) (layers ${def_side}.Cu ${def_side}.Paste ${def_side}.Mask) ${p.net.r2.str})
+	  (pad 1 smd rect (at ${def_neg}1.7 0 ${p.rot}) (size 0.8 1.7) (layers ${def_side}.Cu ${def_side}.Paste ${def_side}.Mask) ${p.net.r1.str})
+	  (pad 2 smd rect (at ${def_pos}1.7 0 ${p.rot}) (size 0.8 1.7) (layers ${def_side}.Cu ${def_side}.Paste ${def_side}.Mask) ${p.net.r2.str})
 		  `
 	    }
 	    if(p.param.reverse) {
 	      return `
 		${standard}
 		${pins('-', '', 'B')}
-		${pins('', '-', 'F')})
+		${pins('-', '', 'F')})
 		`
 	    } else {
 	      return `
